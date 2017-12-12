@@ -27,6 +27,13 @@ add_definitions(-DGTEST_HAS_TR1_TUPLE=0)
 include_directories(
   contrib
 )
+
+hunter_add_package(ZLIB)
+find_package(ZLIB CONFIG REQUIRED)
+
+hunter_add_package(BZip2)
+find_package(BZip2 CONFIG REQUIRED)
+
 add_subdirectory(contrib)
 add_subdirectory(src)
 
