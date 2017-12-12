@@ -27,6 +27,13 @@ enable_testing()
 include_directories(
   contrib
 )
+
+hunter_add_package(ZLIB)
+find_package(ZLIB CONFIG REQUIRED)
+
+hunter_add_package(BZip2)
+find_package(BZip2 CONFIG REQUIRED)
+
 add_subdirectory(contrib)
 add_subdirectory(src)
 

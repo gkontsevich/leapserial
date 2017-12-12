@@ -61,7 +61,7 @@ set(LeapSerial_SRCS
 
 add_pch(LeapSerial_SRCS "stdafx.h" "stdafx.cpp")
 add_library(LeapSerial ${LeapSerial_SRCS})
-target_link_libraries(LeapSerial aes zlib bz2)
+target_link_libraries(LeapSerial aes ZLIB::zlib BZip2::bz2)
 target_include_directories(
   LeapSerial
   INTERFACE
