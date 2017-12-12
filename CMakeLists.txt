@@ -2,6 +2,14 @@ cmake_minimum_required(VERSION 3.8)
 include(version.cmake)
 include("standard/Standard.cmake")
 
+# HUNTER dependencency manager
+include("cmake/HunterGate.cmake")
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.19.167.tar.gz"
+    SHA1 "244a13718ea2e6c0c8998d15559c7e459f615708"
+    LOCAL
+    )
+
 standard_project_preinit()
 project(LeapSerial VERSION ${LeapSerial_VERSION})
 standard_project_postinit()
